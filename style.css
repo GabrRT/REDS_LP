@@ -8,9 +8,19 @@ body {
 }
 
 .header {
-  display: flex;
-  align-items: center;
+  display:flex;
+  flex-direction: column;
   margin-bottom: 20px; /* Space between header and main content */
+  gap:20px;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start; /* or 'center' depending on your design */
+  width: 100%; /* Take full width to align with the nav bar */
+  gap: 20px; /* Space between logo and h1 */
 }
 
 .logo {
@@ -23,6 +33,41 @@ h1 {
   font-size: 2rem;
 
 }
+/* Navigation Bar Styles */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:center /* Centers the links horizontally */
+}
+
+nav li {
+  margin: 0 10px; /* Spacing between links */
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(246, 239, 239); /* Adjust the color as needed */
+  font-weight: bold;
+}
+
+.top-nav {
+  background-color: #d28383; /* Dark background for top nav */
+}
+
+.bottom-nav {
+  background-color: #d48c8c; /* Slightly different color for bottom nav */
+  display: flex;
+  justify-content: center;
+
+}
+
+/* Add styles for hover effects on links if desired */
+nav a:hover {
+  color: #3d0808; /* Lighter color on hover */
+}
+
 
 .main {
   display: flex; /* Use block layout for main content */
@@ -43,9 +88,8 @@ h1 {
 }
 
 footer {
-  text-align: right;
   color: midnightblue;
-  margin-top: 20px;
+  text-align: right;
 }
 
 
@@ -55,7 +99,11 @@ footer {
     align-items: center;
     text-align: center;
   }
-
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   .logo {
     width: 50%;
   }
